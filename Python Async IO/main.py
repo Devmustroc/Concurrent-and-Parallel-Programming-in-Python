@@ -18,6 +18,7 @@ def main():
     for i in range(5):
         maximum_value = (i + 1) * 1000000
         t = threading.Thread(target=calculate_sum_square, args=(maximum_value,))
+        t.start()
         # calculate_sum_square((i + 1) * 1000000)
     print('calculating sum of squares took: ', round(time.time() - calc_start_time, 1))
 
